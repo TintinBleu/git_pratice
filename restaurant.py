@@ -26,3 +26,18 @@ class Restaurant:
     def increment_number_served(self,number):
         self.number_update +=number
         print(f"They served already {self.number_update} people.")
+
+
+class IceCreamStand(Restaurant):
+    """docstring for IceCreamStand"""
+
+    def __init__(self,name,type):
+        super().__init__(name, type)
+        self.flavors=["Cookies","Stawberry","Chocolat"]
+
+
+    def show_flavors(self):
+        print("It provides",end=" ")
+        for flavor in self.flavors:
+            print(flavor,end=",")
+        print("choices.")

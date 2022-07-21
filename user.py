@@ -39,7 +39,29 @@ class User:
         print(f"Reset {self.login_attempts}")
 
 
-user01=User("james", "bond","m", 30)
+class Admin(User):
+
+    def __init__(self, first_name, last_name,sex):
+        super().__init__(first_name,last_name,sex)
+
+
+
+class Privileges:
+    def __init__(self, p):
+        self.p=p
+        self.privileges = ["can add post","can delete post","can ban user"]
+    def show_privileges(self):
+        print(f"This admin {self.privileges[self.p]}. ")
+
+
+admin01=Admin("james","bond","M")
+admin01.describe_user()
+privilege01=Privileges(1)
+privilege01.show_privileges()
+
+
+
+'''user01=User("james", "bond","m", 30)
 user01.describe_user()
 user01.greet_user()
 user01.increment_login_attempts()
@@ -60,4 +82,4 @@ user03.greet_user()
 user03.increment_login_attempts()
 user03.increment_login_attempts()
 user03.increment_login_attempts()
-user03.reset_login_attempts()
+user03.reset_login_attempts()'''
