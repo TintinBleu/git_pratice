@@ -6,6 +6,7 @@ class User:
         self.last_name=last_name
         self.sex=sex
         self.age=age
+        self.login_attempts=0
 
 
     def describe_user(self):
@@ -29,14 +30,34 @@ class User:
             print(f"Welcome Ms.{self.first_name.title()} {self.last_name.title()}.")
 
 
+    def increment_login_attempts(self):
+        self.login_attempts +=1
+        print(f"You have tried {self.login_attempts} times.")
+
+    def reset_login_attempts(self):
+        self.login_attempts=0
+        print(f"Reset {self.login_attempts}")
+
+
 user01=User("james", "bond","m", 30)
 user01.describe_user()
 user01.greet_user()
+user01.increment_login_attempts()
+user01.reset_login_attempts()
 
 user02=User("Mary","Carrie","f")
 user02.describe_user()
 user02.greet_user()
+user02.increment_login_attempts()
+user02.increment_login_attempts()
+user02.increment_login_attempts()
+user02.increment_login_attempts()
+user02.reset_login_attempts()
+
 
 user03=User("Lilian","Kala","f",45)
 user03.describe_user()
 user03.greet_user()
+user03.increment_login_attempts()
+user03.increment_login_attempts()
+user03.reset_login_attempts()
