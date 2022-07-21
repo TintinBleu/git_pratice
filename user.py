@@ -50,14 +50,14 @@ user02.describe_user()
 user02.greet_user()
 user02.increment_login_attempts()
 user02.increment_login_attempts()
-user02.increment_login_attempts()
-user02.increment_login_attempts()
+
 user02.reset_login_attempts()
 
 
 user03=User("Lilian","Kala","f",45)
 user03.describe_user()
 user03.greet_user()
+user03.increment_login_attempts()
 user03.increment_login_attempts()
 user03.increment_login_attempts()
 user03.reset_login_attempts()
